@@ -5,6 +5,7 @@ function App() {
   // 변수 
   const name = "Hong";
   let age = 30;
+  let gender = true;
   // 객체
   const naver = {
     name : "네이버",
@@ -19,7 +20,7 @@ function App() {
      
       <Hello></Hello>
       <Welcome></Welcome>
-   
+      
       <h1> {'이름:'}{name},{'나이 :'}:{age}</h1>
       <h1> 이름:{name},나이 :{age}</h1>
       {/* 객체 { 객체이름} */}
