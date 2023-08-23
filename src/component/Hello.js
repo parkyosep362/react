@@ -3,15 +3,34 @@
 // - let : 일반적인 변수
 // - const : 상수
 
-import World from "./World";
+import { useState } from "react";
+// 속성을 받아준다.
 
-const Hello = function(){
-    // jsx는 하나의 태그만 만들 수 있음
+export default function Hello(props){
+    // props는 강제로 변경 불가
+    // props.age = 150 ; 불가
+
+
+    
+    const[name, setName] = useState('hong');
+
+    //useState를 이용해서 
+    const[age,setAge] = useState(props.age);
+
+    const msg = props.age >19 ? "성년" : "미성년";
+
+    function changeName(){
+        const newname = name === 'hong' ?'kim':'hong';
+        setName(newname);
+        setAge(age+5);
+    }
     return(
+
         <div>
-        <h2>Hello</h2>
-        <World></World>
+           
+            <h1>{name}({age}) : {msg}</h1>
+            <button onClick={changeName}>changeName</button>
         </div>
     )
+
 }
-export default Hello;

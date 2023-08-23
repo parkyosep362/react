@@ -1,31 +1,17 @@
-import Hello from "./component/Hello";
-import Welcome from "./component/Welcome";
+import { useState } from "react";
+import Header from "./component/Header";
+import DayList from "./component/DayList";
+import Day from "./component/Day";
 
 function App() {
-  // 변수 
-  const name = "Hong";
-  let age = 30;
-  let gender = true;
-  // 객체
-  const naver = {
-    name : "네이버",
-    url : "http://www.naver.com",
-    target : "_blank"
-    
-  }
+ 
   return (
     <div className="App">
-
-      {/* 컴포넌트 */}
-     
-      <Hello></Hello>
-      <Welcome></Welcome>
-      
-      <h1> {'이름:'}{name},{'나이 :'}:{age}</h1>
-      <h1> 이름:{name},나이 :{age}</h1>
-      {/* 객체 { 객체이름} */}
-      <h2><a href={naver.url} target={naver.target} > {naver.name}</a></h2>
+      <Header />
+      <DayList></DayList>
+      <Day></Day>
     </div>
+
   );
 }
 
